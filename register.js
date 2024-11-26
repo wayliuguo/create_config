@@ -1,5 +1,5 @@
 const commonConfig = {
-    configFilePath: 'registerConfig.json', // 这里填写你的配置文件实际路径
+    configFilePath: 'init.json', // 这里填写你的配置文件实际路径
     apiUrl: 'https://eye.oa.fenqile.com/api/n9e/metric-manage',
     payloadConfig: {
         app: 'lexin_big_front_kafka_consumer', // app-固定

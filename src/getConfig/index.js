@@ -39,7 +39,13 @@ function getRegisterConfig() {
     return require(configPath)
 }
 
+function getSqlConfig() {
+    const configPath = findNearestFile('sql.js')
+    return require(configPath)
+}
+
 module.exports = {
     getConfig,
-    getRegisterConfig
+    getRegisterConfig,
+    getSqlConfig
 }

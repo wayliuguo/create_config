@@ -48,6 +48,8 @@ function crateConfig() {
     config = getConfig()
     generateHippoConfig()
     generateInitConfig()
+    console.log('hippoConfig.json 用于配置hippo，可拷贝用于hippo配置')
+    console.log('registerConfig.json 用于指标注册，可执行create_config register命令进行指标注册')
 }
 
 module.exports = {
