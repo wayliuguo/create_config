@@ -8,12 +8,13 @@ function generateSql(config) {
     const { lsMetricPrefix, list } = config
     let text = ''
     list.forEach(item => {
-        const metricMolecular = `${lsMetricPrefix}${item.molecular.toLowerCase()}${item.molecularSuffix.toLowerCase()}`
-        const metricDenominator = `${lsMetricPrefix}${item.denominator.toLowerCase()}${item.denominatorSuffix.toLowerCase()}`
+        const metricMolecular = `${lsMetricPrefix}${item.molecular.toLowerCase()}${item.molecularSuffix?.toLowerCase()}`
+        const metricDenominator = `${lsMetricPrefix}${item.denominator.toLowerCase()}${item.denominatorSuffix?.toLowerCase()}`
 
         text += `(sum(sum_over_time(${metricMolecular}{}[30m] offset 1d)) / sum(sum_over_time(${metricDenominator}{}[30m] offset 1d))) - (sum(sum_over_time(${metricMolecular}{}[30m])) / sum(sum_over_time(${metricDenominator}{}[30m]))) >= sum(sum_over_time(${metricMolecular}{}[30m] offset 1d)) / sum(sum_over_time(${metricDenominator}{}[30m] offset 1d)) * 0.2 and sum(sum_over_time(${metricDenominator}{}[30m])) > ${item.minimumAbsoluteValue}\n`
         text += `(sum(sum_over_time(${metricMolecular}{}[30m] offset 1d)) / sum(sum_over_time(${metricDenominator}{}[30m] offset 1d))) - (sum(sum_over_time(${metricMolecular}{}[30m])) / sum(sum_over_time(${metricDenominator}{}[30m]))) >= sum(sum_over_time(${metricMolecular}{}[30m] offset 1d)) / sum(sum_over_time(${metricDenominator}{}[30m] offset 1d)) * 0.5 and sum(sum_over_time(${metricDenominator}{}[30m])) > ${item.minimumAbsoluteValue}\n`
         text += `(sum(sum_over_time(${metricMolecular}{}[30m] offset 1d)) / sum(sum_over_time(${metricDenominator}{}[30m] offset 1d))) - (sum(sum_over_time(${metricMolecular}{}[30m])) / sum(sum_over_time(${metricDenominator}{}[30m]))) >= sum(sum_over_time(${metricMolecular}{}[30m] offset 1d)) / sum(sum_over_time(${metricDenominator}{}[30m] offset 1d)) * 0.8 and sum(sum_over_time(${metricDenominator}{}[30m])) > ${item.minimumAbsoluteValue}\n`
+        text += `sum(sum_over_time(${metricDenominator}{}[30m])) > ${item.minimumAbsoluteValue}\n`
     })
     return text
 }
