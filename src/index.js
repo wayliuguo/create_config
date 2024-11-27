@@ -34,11 +34,11 @@ program
     })
 
 program
-    .command('sql')
-    .description('生成sql')
+    .command('rule')
+    .description('创建规则')
     .action(() => {
-        const { createSql } = require('./createSql')
-        createSql()
+        const { createRule } = require('./createRule')
+        createRule()
     })
 
 // 解析命令行参数

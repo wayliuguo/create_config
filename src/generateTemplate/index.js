@@ -17,21 +17,21 @@ function generateTemplate() {
 }
 
 function generateRegisterTemplate() {
-    fs.writeFile('register.js', getTemplateConfig('register.template.js'), err => {
+    fs.writeFile('registercfg.js', getTemplateConfig('registercfg.template.js'), err => {
         if (err) {
             console.error('生成错误:', err)
         } else {
-            console.log(`register.js 已生成,此配置文件是生成的是注册指标的配置文件`)
+            console.log(`registercfg.js 已生成,此配置文件是生成的是注册指标的配置文件`)
         }
     })
 }
 
 function generateSqlTemplate() {
-    fs.writeFile('sql.js', getTemplateConfig('sql.template.js'), err => {
+    fs.writeFile('rule.js', getTemplateConfig('rule.template.js'), err => {
         if (err) {
             console.error('生成错误:', err)
         } else {
-            console.log(`sql.js 已生成，此配置文件是用于生成sql的配置文件`)
+            console.log(`rule.js 已生成，此配置文件是用于生成sql的配置文件`)
         }
     })
 }

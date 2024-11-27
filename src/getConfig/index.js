@@ -35,12 +35,12 @@ function getConfig() {
 }
 
 function getRegisterConfig() {
-    const configPath = findNearestFile('register.js')
+    const configPath = findNearestFile('registercfg.js')
     return require(configPath)
 }
 
 function getSqlConfig() {
-    const configPath = findNearestFile('sql.js')
+    const configPath = findNearestFile('rule.js')
     return require(configPath)
 }
 
