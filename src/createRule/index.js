@@ -1,31 +1,74 @@
 const fs = require('fs')
+const axios = require('axios')
 const { getSqlConfig } = require('../getConfig')
+const config = getSqlConfig()
 
-// 公共配置对象，包含配置文件路径、请求负载的公共配置以及插件函数列表等信息
-let commonConfig = {}
+const requestPayload = []
 
-function generateSql(config) {
-    const { lsMetricPrefix, list } = config
+async function callApi() {
+    if (!config.enableAutoRegister) {
+        return
+    }
+    console.log('启用了调用接口自动注册监控规则，正在自动注册监控规则')
+
+    const { payLoadCommonConfig = {} } = config
+    const {
+        processApiUrl,
+        apiMethod = 'post',
+        authorization = '',
+        cookie = '',
+    } = payLoadCommonConfig
+    const instance = axios.create({
+        headers: {
+            Cookie: cookie,
+            Authorization: authorization
+        }
+    })
+
+    try {
+        const response = await instance[apiMethod](processApiUrl(payLoadCommonConfig), requestPayload)
+        console.log(`接口调用结果:`, response.data)
+    } catch (error) {
+        console.error('接口调用出错:', error)
+    }
+}
+
+function createSqlHandler() {
     let text = ''
-    list.forEach(item => {
-        const metricMolecular = `${lsMetricPrefix}${item.molecular.toLowerCase()}${item.molecularSuffix?.toLowerCase()}`
-        const metricDenominator = `${lsMetricPrefix}${item.denominator.toLowerCase()}${item.denominatorSuffix?.toLowerCase()}`
 
-        text += `(sum(sum_over_time(${metricMolecular}{}[30m] offset 1d)) / sum(sum_over_time(${metricDenominator}{}[30m] offset 1d))) - (sum(sum_over_time(${metricMolecular}{}[30m])) / sum(sum_over_time(${metricDenominator}{}[30m]))) >= sum(sum_over_time(${metricMolecular}{}[30m] offset 1d)) / sum(sum_over_time(${metricDenominator}{}[30m] offset 1d)) * 0.2 and sum(sum_over_time(${metricDenominator}{}[30m])) > ${item.minimumAbsoluteValue}\n`
-        text += `(sum(sum_over_time(${metricMolecular}{}[30m] offset 1d)) / sum(sum_over_time(${metricDenominator}{}[30m] offset 1d))) - (sum(sum_over_time(${metricMolecular}{}[30m])) / sum(sum_over_time(${metricDenominator}{}[30m]))) >= sum(sum_over_time(${metricMolecular}{}[30m] offset 1d)) / sum(sum_over_time(${metricDenominator}{}[30m] offset 1d)) * 0.5 and sum(sum_over_time(${metricDenominator}{}[30m])) > ${item.minimumAbsoluteValue}\n`
-        text += `(sum(sum_over_time(${metricMolecular}{}[30m] offset 1d)) / sum(sum_over_time(${metricDenominator}{}[30m] offset 1d))) - (sum(sum_over_time(${metricMolecular}{}[30m])) / sum(sum_over_time(${metricDenominator}{}[30m]))) >= sum(sum_over_time(${metricMolecular}{}[30m] offset 1d)) / sum(sum_over_time(${metricDenominator}{}[30m] offset 1d)) * 0.8 and sum(sum_over_time(${metricDenominator}{}[30m])) > ${item.minimumAbsoluteValue}\n`
-        text += `sum(sum_over_time(${metricDenominator}{}[30m])) > ${item.minimumAbsoluteValue}\n`
+    const { list, payLoadCommonConfig = {} } = config
+    const { defaultPayload } = payLoadCommonConfig
+    list.forEach(item => {
+        const { molecular, denominator } = item
+        text += `-----------${molecular}/${denominator}---------\n`
+        const { thresholdList = [] } = item
+        thresholdList.forEach(thresholdItem => {
+            const { replacePayload } = thresholdItem
+            const prom_ql = config.processTemplateText(config, {
+                ...item,
+                ...thresholdItem
+            })
+            requestPayload.push({
+                ...defaultPayload,
+                ...replacePayload,
+                prom_ql
+            })
+            text += prom_ql
+            text += '\n'
+        })
+        text += '\n'
     })
     return text
 }
 
-// 主函数
 function createRule() {
-    commonConfig = getSqlConfig()
-    const textContent = generateSql(commonConfig)
+    const textContent = createSqlHandler()
     const outputFilePath = 'rule.txt'
     fs.writeFileSync(outputFilePath, textContent, 'utf8')
-    console.log(`文本文件已生成: ${outputFilePath}`)
+    console.log(`文本已生成: ${outputFilePath}`)
+
+    // 调用接口注册规则
+    callApi()
 }
 
 module.exports = {
