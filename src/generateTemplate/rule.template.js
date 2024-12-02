@@ -110,7 +110,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-用户正常停留率-30min内同比下降20%' // 规则标题
+                        name: '【2.0】1-1、借钱-借钱首页-用户正常停留率-30min内同比下降20%' // 规则标题
                     }
                 },
                 {
@@ -118,7 +118,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 2, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-用户正常停留率-30min内同比下降50%' // 规则标题
+                        name: '【2.0】1-1、借钱-借钱首页-用户正常停留率-30min内同比下降50%' // 规则标题
                     }
                 },
                 {
@@ -126,7 +126,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 1, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-用户正常停留率-30min内同比下降80%', // 规则标题
+                        name: '【2.0】1-1、借钱-借钱首页-用户正常停留率-30min内同比下降80%', // 规则标题
                         notify_channels: ['wecom', 'phone'], // 致命告警必须配置电话渠道
                         runbook_url: 'https://ledocs.oa.fenqile.com/doc/11d4e637e18bb37d0485f7263851542e' // 预案链接，致命告警必填
                     }
@@ -137,7 +137,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-用户正常停留率-30min内访问量低于5720' // 规则标题
+                        name: '【2.0】1-1、借钱-借钱首页-用户正常停留率-30min内访问量低于5720' // 规则标题
                     }
                 }
             ]
@@ -155,7 +155,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-停留后正常打开率-30min内同比下降20%' // 规则标题
+                        name: '【2.0】1-2、借钱-借钱首页-停留后正常打开率-30min内同比下降20%' // 规则标题
                     }
                 },
                 {
@@ -163,7 +163,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 2, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-停留后正常打开率-30min内同比下降50%' // 规则标题
+                        name: '【2.0】1-2、借钱-借钱首页-停留后正常打开率-30min内同比下降50%' // 规则标题
                     }
                 },
                 {
@@ -171,7 +171,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 1, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-停留后正常打开率-30min内同比下降80%', // 规则标题
+                        name: '【2.0】1-2、借钱-借钱首页-停留后正常打开率-30min内同比下降80%', // 规则标题
                         notify_channels: ['wecom', 'phone'], // 致命告警必须配置电话渠道
                         runbook_url: 'https://ledocs.oa.fenqile.com/doc/11d4e637e18bb37d0485f7263851542e' // 预案链接，致命告警必填
                     }
@@ -182,7 +182,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-停留后正常打开率-30min内访问量低于2500' // 规则标题
+                        name: '【2.0】1-2、借钱-借钱首页-停留后正常打开率-30min内访问量低于2500' // 规则标题
                     }
                 }
             ]
@@ -200,7 +200,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-手动输入金额率-30min内同比下降20%' // 规则标题
+                        name: '【2.0】2-1、借钱-借钱首页-手动输入金额率-30min内同比下降20%' // 规则标题
                     }
                 },
                 {
@@ -208,7 +208,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 2, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-手动输入金额率-30min内同比下降50%' // 规则标题
+                        name: '【2.0】2-1、借钱-借钱首页-手动输入金额率-30min内同比下降50%' // 规则标题
                     }
                 },
                 {
@@ -216,7 +216,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 1, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-手动输入金额率-30min内同比下降80%', // 规则标题
+                        name: '【2.0】2-1、借钱-借钱首页-手动输入金额率-30min内同比下降80%', // 规则标题
                         notify_channels: ['wecom', 'phone'], // 致命告警必须配置电话渠道
                         runbook_url: 'https://ledocs.oa.fenqile.com/doc/11d4e637e18bb37d0485f7263851542e' // 预案链接，致命告警必填
                     }
@@ -227,7 +227,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-手动输入金额率-30min内访问量低于2400' // 规则标题
+                        name: '【2.0】2-1、借钱-借钱首页-手动输入金额率-30min内访问量低于2400' // 规则标题
                     }
                 }
             ]
@@ -245,7 +245,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-点击下单率-30min内同比下降20%' // 规则标题
+                        name: '【2.0】2-2、借钱-借钱首页-点击下单率-30min内同比下降20%' // 规则标题
                     }
                 },
                 {
@@ -253,7 +253,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 2, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-点击下单率-30min内同比下降50%' // 规则标题
+                        name: '【2.0】2-2、借钱-借钱首页-点击下单率-30min内同比下降50%' // 规则标题
                     }
                 },
                 {
@@ -261,7 +261,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 1, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-点击下单率-30min内同比下降80%', // 规则标题
+                        name: '【2.0】2-2、借钱-借钱首页-点击下单率-30min内同比下降80%', // 规则标题
                         notify_channels: ['wecom', 'phone'], // 致命告警必须配置电话渠道
                         runbook_url: 'https://ledocs.oa.fenqile.com/doc/11d4e637e18bb37d0485f7263851542e' // 预案链接，致命告警必填
                     }
@@ -272,14 +272,59 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-点击下单率-30min内访问量低于1380' // 规则标题
+                        name: '【2.0】2-2、借钱-借钱首页-点击下单率-30min内访问量低于1380' // 规则标题
                     }
                 }
             ]
         },
         // 可触发创单比率
         {
-            molecular: 'ORDER_CONFIRM_CLICK', // 分子
+            molecular: 'CREATE_ORDER_START', // 分子
+            molecularSuffix: '',
+            denominator: 'ORDER_CONFIRM_CLICK', //分母
+            denominatorSuffix: '',
+            minimumAbsoluteValue: 1270, // 最小绝对值
+            thresholdList: [
+                {
+                    threshold: 0.2, // 阈值
+                    // 用于覆盖 defaultPayload
+                    replacePayload: {
+                        severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
+                        name: '【2.0】3-1、借钱-借钱首页-可触发创单比率-30min内同比下降20%' // 规则标题
+                    }
+                },
+                {
+                    threshold: 0.5, // 阈值
+                    // 用于覆盖 defaultPayload
+                    replacePayload: {
+                        severity: 2, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
+                        name: '【2.0】3-1、借钱-借钱首页-可触发创单比率-30min内同比下降50%' // 规则标题
+                    }
+                },
+                {
+                    threshold: 0.8, // 阈值
+                    // 用于覆盖 defaultPayload
+                    replacePayload: {
+                        severity: 1, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
+                        name: '【2.0】3-1、借钱-借钱首页-可触发创单比率-30min内同比下降80%', // 规则标题
+                        notify_channels: ['wecom', 'phone'], // 致命告警必须配置电话渠道
+                        runbook_url: 'https://ledocs.oa.fenqile.com/doc/11d4e637e18bb37d0485f7263851542e' // 预案链接，致命告警必填
+                    }
+                },
+                {
+                    // 自定义sql模板
+                    sqlTemplate: 'sum(sum_over_time(${metricDenominator}{}[30m])) < ${minimumAbsoluteValue}',
+                    // 用于覆盖 defaultPayload
+                    replacePayload: {
+                        severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
+                        name: '【2.0】3-1、借钱-借钱首页-可触发创单比率-30min内访问量低于1270' // 规则标题
+                    }
+                }
+            ]
+        },
+        // 创单成功率
+        {
+            molecular: 'ORDER_STATE_QUERY_RESULT_SUCCESS', // 分子
             molecularSuffix: '',
             denominator: 'CREATE_ORDER_START', //分母
             denominatorSuffix: '',
@@ -290,7 +335,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-可触发创单比率-30min内同比下降20%' // 规则标题
+                        name: '【2.0】3-2、借钱-借钱首页-创单成功率-30min内同比下降20%' // 规则标题
                     }
                 },
                 {
@@ -298,7 +343,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 2, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-可触发创单比率-30min内同比下降50%' // 规则标题
+                        name: '【2.0】3-2、借钱-借钱首页-创单成功率-30min内同比下降50%' // 规则标题
                     }
                 },
                 {
@@ -306,7 +351,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 1, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-可触发创单比率-30min内同比下降80%', // 规则标题
+                        name: '【2.0】3-2、借钱-借钱首页-创单成功率-30min内同比下降80%', // 规则标题
                         notify_channels: ['wecom', 'phone'], // 致命告警必须配置电话渠道
                         runbook_url: 'https://ledocs.oa.fenqile.com/doc/11d4e637e18bb37d0485f7263851542e' // 预案链接，致命告警必填
                     }
@@ -317,7 +362,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-可触发创单比率-30min内访问量低于1060' // 规则标题
+                        name: '【2.0】3-2、借钱-借钱首页-创单成功率-30min内访问量低于1060' // 规则标题
                     }
                 }
             ]
@@ -335,7 +380,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-订单信息反查成功率-30min内同比下降20%' // 规则标题
+                        name: '【2.0】3-3、借钱-借钱首页-订单信息反查成功率-30min内同比下降20%' // 规则标题
                     }
                 },
                 {
@@ -343,7 +388,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 2, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-订单信息反查成功率-30min内同比下降50%' // 规则标题
+                        name: '【2.0】3-3、借钱-借钱首页-订单信息反查成功率-30min内同比下降50%' // 规则标题
                     }
                 },
                 {
@@ -351,7 +396,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 1, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-订单信息反查成功率-30min内同比下降80%', // 规则标题
+                        name: '【2.0】3-3、借钱-借钱首页-订单信息反查成功率-30min内同比下降80%', // 规则标题
                         notify_channels: ['wecom', 'phone'], // 致命告警必须配置电话渠道
                         runbook_url: 'https://ledocs.oa.fenqile.com/doc/11d4e637e18bb37d0485f7263851542e' // 预案链接，致命告警必填
                     }
@@ -362,7 +407,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-订单信息反查成功率-30min内访问量低于380' // 规则标题
+                        name: '【2.0】3-3、借钱-借钱首页-订单信息反查成功率-30min内访问量低于380' // 规则标题
                     }
                 }
             ]
@@ -380,7 +425,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-补充资料环节通过率-30min内同比下降20%' // 规则标题
+                        name: '【2.0】4-1、借钱-借钱首页-补充资料环节通过率-30min内同比下降20%' // 规则标题
                     }
                 },
                 {
@@ -388,7 +433,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 2, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-补充资料环节通过率-30min内同比下降50%' // 规则标题
+                        name: '【2.0】4-1、借钱-借钱首页-补充资料环节通过率-30min内同比下降50%' // 规则标题
                     }
                 },
                 {
@@ -396,7 +441,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 1, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-补充资料环节通过率-30min内同比下降80%', // 规则标题
+                        name: '【2.0】4-1、借钱-借钱首页-补充资料环节通过率-30min内同比下降80%', // 规则标题
                         notify_channels: ['wecom', 'phone'], // 致命告警必须配置电话渠道
                         runbook_url: 'https://ledocs.oa.fenqile.com/doc/11d4e637e18bb37d0485f7263851542e' // 预案链接，致命告警必填
                     }
@@ -407,7 +452,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-补充资料环节通过率-30min内访问量低于1030' // 规则标题
+                        name: '【2.0】4-1、借钱-借钱首页-补充资料环节通过率-30min内访问量低于1030' // 规则标题
                     }
                 }
             ]
@@ -425,7 +470,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-阅读协议环节通过率-30min内同比下降20%' // 规则标题
+                        name: '【2.0】4-2、借钱-借钱首页-阅读协议环节通过率-30min内同比下降20%' // 规则标题
                     }
                 },
                 {
@@ -433,7 +478,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 2, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-阅读协议环节通过率-30min内同比下降50%' // 规则标题
+                        name: '【2.0】4-2、借钱-借钱首页-阅读协议环节通过率-30min内同比下降50%' // 规则标题
                     }
                 },
                 {
@@ -441,7 +486,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 1, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-阅读协议环节通过率-30min内同比下降80%', // 规则标题
+                        name: '【2.0】4-2、借钱-借钱首页-阅读协议环节通过率-30min内同比下降80%', // 规则标题
                         notify_channels: ['wecom', 'phone'], // 致命告警必须配置电话渠道
                         runbook_url: 'https://ledocs.oa.fenqile.com/doc/11d4e637e18bb37d0485f7263851542e' // 预案链接，致命告警必填
                     }
@@ -452,7 +497,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-阅读协议环节通过率-30min内访问量低于1020' // 规则标题
+                        name: '【2.0】4-2、借钱-借钱首页-阅读协议环节通过率-30min内访问量低于1020' // 规则标题
                     }
                 }
             ]
@@ -470,7 +515,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-二审前金融策略环节通过率-30min内同比下降20%' // 规则标题
+                        name: '【2.0】4-3、借钱-借钱首页-二审前金融策略环节通过率-30min内同比下降20%' // 规则标题
                     }
                 },
                 {
@@ -478,7 +523,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 2, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-二审前金融策略环节通过率-30min内同比下降50%' // 规则标题
+                        name: '【2.0】4-3、借钱-借钱首页-二审前金融策略环节通过率-30min内同比下降50%' // 规则标题
                     }
                 },
                 {
@@ -486,7 +531,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 1, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-二审前金融策略环节通过率-30min内同比下降80%', // 规则标题
+                        name: '【2.0】4-3、借钱-借钱首页-二审前金融策略环节通过率-30min内同比下降80%', // 规则标题
                         notify_channels: ['wecom', 'phone'], // 致命告警必须配置电话渠道
                         runbook_url: 'https://ledocs.oa.fenqile.com/doc/11d4e637e18bb37d0485f7263851542e' // 预案链接，致命告警必填
                     }
@@ -497,7 +542,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-二审前金融策略环节通过率-30min内访问量低于1020' // 规则标题
+                        name: '【2.0】4-3、借钱-借钱首页-二审前金融策略环节通过率-30min内访问量低于1020' // 规则标题
                     }
                 }
             ]
@@ -515,7 +560,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-资料/交易鉴权环节通过率-30min内同比下降20%' // 规则标题
+                        name: '【2.0】4-4、借钱-借钱首页-资料/交易鉴权环节通过率-30min内同比下降20%' // 规则标题
                     }
                 },
                 {
@@ -523,7 +568,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 2, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-资料/交易鉴权环节通过率-30min内同比下降50%' // 规则标题
+                        name: '【2.0】4-4、借钱-借钱首页-资料/交易鉴权环节通过率-30min内同比下降50%' // 规则标题
                     }
                 },
                 {
@@ -531,7 +576,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 1, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-资料/交易鉴权环节通过率-30min内同比下降80%', // 规则标题
+                        name: '【2.0】4-4、借钱-借钱首页-资料/交易鉴权环节通过率-30min内同比下降80%', // 规则标题
                         notify_channels: ['wecom', 'phone'], // 致命告警必须配置电话渠道
                         runbook_url: 'https://ledocs.oa.fenqile.com/doc/11d4e637e18bb37d0485f7263851542e' // 预案链接，致命告警必填
                     }
@@ -542,7 +587,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-资料/交易鉴权环节通过率-30min内访问量低于980' // 规则标题
+                        name: '【2.0】4-4、借钱-借钱首页-资料/交易鉴权环节通过率-30min内访问量低于980' // 规则标题
                     }
                 }
             ]
@@ -560,7 +605,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-创单后提交支付率-30min内同比下降20%' // 规则标题
+                        name: '【2.0】5-1、借钱-借钱首页-创单后提交支付率-30min内同比下降20%' // 规则标题
                     }
                 },
                 {
@@ -568,7 +613,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 2, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-创单后提交支付率-30min内同比下降50%' // 规则标题
+                        name: '【2.0】5-1、借钱-借钱首页-创单后提交支付率-30min内同比下降50%' // 规则标题
                     }
                 },
                 {
@@ -576,7 +621,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 1, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-创单后提交支付率-30min内同比下降80%', // 规则标题
+                        name: '【2.0】5-1、借钱-借钱首页-创单后提交支付率-30min内同比下降80%', // 规则标题
                         notify_channels: ['wecom', 'phone'], // 致命告警必须配置电话渠道
                         runbook_url: 'https://ledocs.oa.fenqile.com/doc/11d4e637e18bb37d0485f7263851542e' // 预案链接，致命告警必填
                     }
@@ -587,7 +632,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-创单后提交支付率-30min内访问量低于830' // 规则标题
+                        name: '【2.0】5-1、借钱-借钱首页-创单后提交支付率-30min内访问量低于830' // 规则标题
                     }
                 }
             ]
@@ -605,7 +650,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-提交支付成功率-30min内同比下降20%' // 规则标题
+                        name: '【2.0】5-2、借钱-借钱首页-提交支付成功率-30min内同比下降20%' // 规则标题
                     }
                 },
                 {
@@ -613,7 +658,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 2, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-提交支付成功率-30min内同比下降50%' // 规则标题
+                        name: '【2.0】5-2、借钱-借钱首页-提交支付成功率-30min内同比下降50%' // 规则标题
                     }
                 },
                 {
@@ -621,7 +666,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 1, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-提交支付成功率-30min内同比下降80%', // 规则标题
+                        name: '【2.0】5-2、借钱-借钱首页-提交支付成功率-30min内同比下降80%', // 规则标题
                         notify_channels: ['wecom', 'phone'], // 致命告警必须配置电话渠道
                         runbook_url: 'https://ledocs.oa.fenqile.com/doc/11d4e637e18bb37d0485f7263851542e' // 预案链接，致命告警必填
                     }
@@ -632,7 +677,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-提交支付成功率-30min内访问量低于820' // 规则标题
+                        name: '【2.0】5-2、借钱-借钱首页-提交支付成功率-30min内访问量低于820' // 规则标题
                     }
                 }
             ]
@@ -651,7 +696,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-首页路由接口成功率-30min内访问量低于5620' // 规则标题
+                        name: '【2.0】1-1、借钱-借钱首页-首页路由接口成功率-30min内访问量低于5620' // 规则标题
                     }
                 }
             ]
@@ -670,7 +715,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-子产品信息的接口成功率-30min内同比下降20%' // 规则标题
+                        name: '【2.0】1-2、借钱-借钱首页-子产品信息的接口成功率-30min内同比下降20%' // 规则标题
                     }
                 }
             ]
@@ -688,7 +733,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-用户限额的接口成功率-30min内同比下降20%' // 规则标题
+                        name: '【2.0】1-3、借钱-借钱首页-用户限额的接口成功率-30min内同比下降20%' // 规则标题
                     }
                 }
             ]
@@ -706,7 +751,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-基础费率的接口成功率-30min内同比下降20%' // 规则标题
+                        name: '【2.0】1-4、借钱-借钱首页-基础费率的接口成功率-30min内同比下降20%' // 规则标题
                     }
                 }
             ]
@@ -724,7 +769,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-键盘唤起成功率-30min内同比下降20%' // 规则标题
+                        name: '【2.0】2-1、借钱-借钱首页-键盘唤起成功率-30min内同比下降20%' // 规则标题
                     }
                 }
             ]
@@ -742,7 +787,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-创建订单的接口成功率-30min内同比下降20%' // 规则标题
+                        name: '【2.0】3-1、借钱-借钱首页-创建订单的接口成功率-30min内同比下降20%' // 规则标题
                     }
                 }
             ]
@@ -760,7 +805,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-创单结果轮询的接口成功率-30min内同比下降20%' // 规则标题
+                        name: '【2.0】3-2、借钱-借钱首页-创单结果轮询的接口成功率-30min内同比下降20%' // 规则标题
                     }
                 }
             ]
@@ -778,7 +823,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-订单信息反查的接口成功率-30min内同比下降20%' // 规则标题
+                        name: '【2.0】3-3、借钱-借钱首页-订单信息反查的接口成功率-30min内同比下降20%' // 规则标题
                     }
                 }
             ]
@@ -796,7 +841,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-协议查询接口成功率-30min内同比下降20%' // 规则标题
+                        name: '【2.0】4-1、借钱-借钱首页-协议查询接口成功率-30min内同比下降20%' // 规则标题
                     }
                 }
             ]
@@ -814,7 +859,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-初始化协议组件成功率-30min内同比下降20%' // 规则标题
+                        name: '【2.0】4-2、借钱-借钱首页-初始化协议组件成功率-30min内同比下降20%' // 规则标题
                     }
                 }
             ]
@@ -832,7 +877,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-授信协议签署接口成功率-30min内同比下降20%' // 规则标题
+                        name: '【2.0】4-3、借钱-借钱首页-授信协议签署接口成功率-30min内同比下降20%' // 规则标题
                     }
                 }
             ]
@@ -850,7 +895,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-金融策略查询的接口成功率-30min内同比下降20%' // 规则标题
+                        name: '【2.0】4-4、借钱-借钱首页-金融策略查询的接口成功率-30min内同比下降20%' // 规则标题
                     }
                 }
             ]
@@ -868,7 +913,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-鉴权查询接口成功率-30min内同比下降20%' // 规则标题
+                        name: '【2.0】4-5、借钱-借钱首页-鉴权查询接口成功率-30min内同比下降20%' // 规则标题
                     }
                 }
             ]
@@ -886,7 +931,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-创建支付单的接口成功率-30min内同比下降20%' // 规则标题
+                        name: '【2.0】5-1、借钱-借钱首页-创建支付单的接口成功率-30min内同比下降20%' // 规则标题
                     }
                 }
             ]
@@ -904,7 +949,7 @@ const config = {
                     // 用于覆盖 defaultPayload
                     replacePayload: {
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-支付结果轮询的接口成功率-30min内同比下降20%' // 规则标题
+                        name: '【2.0】5-2、借钱-借钱首页-支付结果轮询的接口成功率-30min内同比下降20%' // 规则标题
                     }
                 }
             ]
