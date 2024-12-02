@@ -12,12 +12,7 @@ async function callApi() {
     console.log('启用了调用接口自动注册监控规则，正在自动注册监控规则')
 
     const { payLoadCommonConfig = {} } = config
-    const {
-        processApiUrl,
-        apiMethod = 'post',
-        authorization = '',
-        cookie = '',
-    } = payLoadCommonConfig
+    const { processApiUrl, apiMethod = 'post', authorization = '', cookie = '' } = payLoadCommonConfig
     const instance = axios.create({
         headers: {
             Cookie: cookie,
@@ -44,7 +39,8 @@ function createSqlHandler() {
         const { thresholdList = [] } = item
         thresholdList.forEach(thresholdItem => {
             const { replacePayload } = thresholdItem
-            const prom_ql = config.processTemplateText(config, {
+            const processTemplateText = item.processTemplateText || config.processTemplateText
+            const prom_ql = processTemplateText(config, {
                 ...item,
                 ...thresholdItem
             })

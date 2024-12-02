@@ -2,7 +2,7 @@
 const defaultPayload = {
     name: '规则标题', // 规则标题（必填），可在thresholdList的name中指定
     note: 'hippo配置key：kafka_record_config_xfjr', // 规则备注 （必填）
-    severity: 3, // 告警级别（必填）
+    severity: 3, // 告警级别（必填）普通告警：3，  紧急告警：2， 致命告警：1
     rule_type: 1, // 告警类型（必填）
     prom_source_id: 0,
     cluster: '$all', // 生效集群（必填）
@@ -22,7 +22,7 @@ const defaultPayload = {
     enable_stime: '00:00',
     enable_etime: '23:59',
     enable_in_bg: 0,
-    notify_channels: ['wecom'], // 通知媒介（必填）
+    notify_channels: ['wecom'], // 通知媒介（必填）邮件：email，微信：wecom，电话：phone，短信：sms
     notify_recovered: 1,
     recover_duration: 0,
     notify_repeat_step: 5,
@@ -84,10 +84,12 @@ const config = {
         const metricDenominator = `${
             config.lsMetricPrefix
         }${item.denominator.toLowerCase()}${item.denominatorSuffix?.toLowerCase()}`
-        const threshold = item.threshold
-        const minimumAbsoluteValue = item.minimumAbsoluteValue
+        const threshold = item.threshold || ''
+        const minimumAbsoluteValue = item.minimumAbsoluteValue || ''
 
-        text = config.sqlTemplate
+        const sqlTemplate = item.sqlTemplate || config.sqlTemplate
+
+        text = sqlTemplate
             .replace(/\${metricMolecular}/g, metricMolecular)
             .replace(/\${metricDenominator}/g, metricDenominator)
             .replace(/\${threshold}/g, threshold.toString())
@@ -100,13 +102,13 @@ const config = {
             molecularSuffix: '',
             denominator: 'PAGE_EXPOSE', //分母
             denominatorSuffix: '',
-            minimumAbsoluteValue: 10000, // 最小绝对值
+            minimumAbsoluteValue: 4200, // 最小绝对值
             thresholdList: [
                 {
                     threshold: 0.2, // 阈值
                     // 用于覆盖 defaultPayload
                     replacePayload: {
-                        severity: 2, // 告警级别
+                        severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
                         name: '借钱-借钱首页-用户正常停留率-30min内同比下降20%' // 规则标题
                     }
                 },
@@ -114,8 +116,26 @@ const config = {
                     threshold: 0.5, // 阈值
                     // 用于覆盖 defaultPayload
                     replacePayload: {
-                        severity: 1, // 告警级别
+                        severity: 2, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
                         name: '借钱-借钱首页-用户正常停留率-30min内同比下降50%' // 规则标题
+                    }
+                },
+                {
+                    threshold: 0.8, // 阈值
+                    // 用于覆盖 defaultPayload
+                    replacePayload: {
+                        severity: 1, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
+                        name: '借钱-借钱首页-用户正常停留率-30min内同比下降80%', // 规则标题
+                        runbook_url: 'https://ledocs.oa.fenqile.com/doc/11d4e637e18bb37d0485f7263851542e' // 预案链接，致命告警必填
+                    }
+                },
+                {
+                    sqlTemplate: 'sum(sum_over_time(${metricDenominator}{}[30m])) > ${minimumAbsoluteValue}',
+                    // 用于覆盖 defaultPayload
+                    replacePayload: {
+                        severity: 1, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
+                        name: '借钱-借钱首页-用户正常停留率-30min内同比下降80%', // 规则标题
+                        runbook_url: 'https://ledocs.oa.fenqile.com/doc/11d4e637e18bb37d0485f7263851542e' // 预案链接，致命告警必填
                     }
                 }
             ]
