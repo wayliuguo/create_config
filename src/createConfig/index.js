@@ -7,7 +7,7 @@ let config = {}
 
 // 生成 JSON 配置项
 function generateConfigItems(config, isInit) {
-    return config.eventPosSuffixes.map(item => {
+    return config.uniqueEventPosSuffixes.map(item => {
         const { eventPosSuffixes: suffix, desc } = item
         const res = {
             lsMetric: `${config.lsMetricPrefix}${suffix.toLowerCase()}`,
@@ -15,7 +15,8 @@ function generateConfigItems(config, isInit) {
             module: 'business_log',
             method: `${config.eventPosPrefix}${suffix}`,
             otherConfigInfo: '',
-            distincts: ['uid']
+            distincts: ['uid'],
+            tags: []
         }
         if (isInit) {
             res.desc = `${config.descPrefix}${desc}`
@@ -43,9 +44,24 @@ function generateInitConfig() {
     saveJsonFile(config.registerConfigName, configItems)
 }
 
+function getUniEventPosSuffixes() {
+    config.uniqueEventPosSuffixes = []
+    const seenEventPosSuffixes = new Set()
+    config.eventPosSuffixes.forEach(item => {
+        const { eventPosSuffixes } = item
+        if (!seenEventPosSuffixes.has(eventPosSuffixes)) {
+            // 如果当前的eventPosSuffixes值没出现过，添加到去重结果数组中
+            config.uniqueEventPosSuffixes.push(item)
+            // 同时将该值添加到Set中，标记为已出现过
+            seenEventPosSuffixes.add(eventPosSuffixes)
+        }
+    })
+}
+
 // 主函数
 function crateConfig() {
     config = getConfig()
+    getUniEventPosSuffixes()
     generateHippoConfig()
     generateInitConfig()
     console.log('hippoConfig.json 用于配置hippo，可拷贝用于hippo配置')
