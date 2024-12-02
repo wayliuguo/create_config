@@ -15,8 +15,8 @@ const defaultPayload = {
     multi_enable: 0,
     enable_recover_value: false,
     recover_trigger_value: 0,
-    prom_eval_interval: 60,
-    prom_for_duration: 60,
+    prom_eval_interval: 300, // 执行频率（必填）
+    prom_for_duration: 300, // 持续时长（必填）
     enable_status: false,
     enable_days_of_week: ['1', '2', '3', '4', '5', '6', '0'],
     enable_stime: '00:00',
@@ -297,6 +297,7 @@ const config = {
                     threshold: 0.5, // 阈值
                     // 用于覆盖 defaultPayload
                     replacePayload: {
+                        disabled: 1, // 禁用告警
                         severity: 2, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
                         name: '【2.0】3-1、借钱-借钱首页-可触发创单比率-30min内同比下降50%' // 规则标题
                     }
@@ -305,6 +306,7 @@ const config = {
                     threshold: 0.8, // 阈值
                     // 用于覆盖 defaultPayload
                     replacePayload: {
+                        disabled: 1, // 禁用告警
                         severity: 1, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
                         name: '【2.0】3-1、借钱-借钱首页-可触发创单比率-30min内同比下降80%', // 规则标题
                         notify_channels: ['wecom', 'phone'], // 致命告警必须配置电话渠道
@@ -342,11 +344,13 @@ const config = {
                     threshold: 0.5, // 阈值
                     // 用于覆盖 defaultPayload
                     replacePayload: {
+                        disabled: 1, // 禁用告警
                         severity: 2, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
                         name: '【2.0】3-2、借钱-借钱首页-创单成功率-30min内同比下降50%' // 规则标题
                     }
                 },
                 {
+                    disabled: 1, // 禁用告警
                     threshold: 0.8, // 阈值
                     // 用于覆盖 defaultPayload
                     replacePayload: {
@@ -387,11 +391,13 @@ const config = {
                     threshold: 0.5, // 阈值
                     // 用于覆盖 defaultPayload
                     replacePayload: {
+                        disabled: 1, // 禁用告警
                         severity: 2, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
                         name: '【2.0】3-3、借钱-借钱首页-订单信息反查成功率-30min内同比下降50%' // 规则标题
                     }
                 },
                 {
+                    disabled: 1, // 禁用告警
                     threshold: 0.8, // 阈值
                     // 用于覆盖 defaultPayload
                     replacePayload: {
@@ -432,6 +438,7 @@ const config = {
                     threshold: 0.5, // 阈值
                     // 用于覆盖 defaultPayload
                     replacePayload: {
+                        disabled: 1, // 禁用告警
                         severity: 2, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
                         name: '【2.0】4-1、借钱-借钱首页-补充资料环节通过率-30min内同比下降50%' // 规则标题
                     }
@@ -440,6 +447,7 @@ const config = {
                     threshold: 0.8, // 阈值
                     // 用于覆盖 defaultPayload
                     replacePayload: {
+                        disabled: 1, // 禁用告警
                         severity: 1, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
                         name: '【2.0】4-1、借钱-借钱首页-补充资料环节通过率-30min内同比下降80%', // 规则标题
                         notify_channels: ['wecom', 'phone'], // 致命告警必须配置电话渠道
@@ -477,6 +485,7 @@ const config = {
                     threshold: 0.5, // 阈值
                     // 用于覆盖 defaultPayload
                     replacePayload: {
+                        disabled: 1, // 禁用告警
                         severity: 2, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
                         name: '【2.0】4-2、借钱-借钱首页-阅读协议环节通过率-30min内同比下降50%' // 规则标题
                     }
@@ -485,6 +494,7 @@ const config = {
                     threshold: 0.8, // 阈值
                     // 用于覆盖 defaultPayload
                     replacePayload: {
+                        disabled: 1, // 禁用告警
                         severity: 1, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
                         name: '【2.0】4-2、借钱-借钱首页-阅读协议环节通过率-30min内同比下降80%', // 规则标题
                         notify_channels: ['wecom', 'phone'], // 致命告警必须配置电话渠道
@@ -522,6 +532,7 @@ const config = {
                     threshold: 0.5, // 阈值
                     // 用于覆盖 defaultPayload
                     replacePayload: {
+                        disabled: 1, // 禁用告警
                         severity: 2, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
                         name: '【2.0】4-3、借钱-借钱首页-二审前金融策略环节通过率-30min内同比下降50%' // 规则标题
                     }
@@ -530,6 +541,7 @@ const config = {
                     threshold: 0.8, // 阈值
                     // 用于覆盖 defaultPayload
                     replacePayload: {
+                        disabled: 1, // 禁用告警
                         severity: 1, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
                         name: '【2.0】4-3、借钱-借钱首页-二审前金融策略环节通过率-30min内同比下降80%', // 规则标题
                         notify_channels: ['wecom', 'phone'], // 致命告警必须配置电话渠道
@@ -567,6 +579,7 @@ const config = {
                     threshold: 0.5, // 阈值
                     // 用于覆盖 defaultPayload
                     replacePayload: {
+                        disabled: 1, // 禁用告警
                         severity: 2, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
                         name: '【2.0】4-4、借钱-借钱首页-资料/交易鉴权环节通过率-30min内同比下降50%' // 规则标题
                     }
@@ -575,6 +588,7 @@ const config = {
                     threshold: 0.8, // 阈值
                     // 用于覆盖 defaultPayload
                     replacePayload: {
+                        disabled: 1, // 禁用告警
                         severity: 1, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
                         name: '【2.0】4-4、借钱-借钱首页-资料/交易鉴权环节通过率-30min内同比下降80%', // 规则标题
                         notify_channels: ['wecom', 'phone'], // 致命告警必须配置电话渠道
@@ -604,6 +618,7 @@ const config = {
                     threshold: 0.2, // 阈值
                     // 用于覆盖 defaultPayload
                     replacePayload: {
+                        disabled: 1, // 禁用告警
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
                         name: '【2.0】5-1、借钱-借钱首页-创单后提交支付率-30min内同比下降20%' // 规则标题
                     }
@@ -612,6 +627,7 @@ const config = {
                     threshold: 0.5, // 阈值
                     // 用于覆盖 defaultPayload
                     replacePayload: {
+                        disabled: 1, // 禁用告警
                         severity: 2, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
                         name: '【2.0】5-1、借钱-借钱首页-创单后提交支付率-30min内同比下降50%' // 规则标题
                     }
@@ -620,6 +636,7 @@ const config = {
                     threshold: 0.8, // 阈值
                     // 用于覆盖 defaultPayload
                     replacePayload: {
+                        disabled: 1, // 禁用告警
                         severity: 1, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
                         name: '【2.0】5-1、借钱-借钱首页-创单后提交支付率-30min内同比下降80%', // 规则标题
                         notify_channels: ['wecom', 'phone'], // 致命告警必须配置电话渠道
@@ -631,6 +648,7 @@ const config = {
                     sqlTemplate: 'sum(sum_over_time(${metricDenominator}{}[30m])) < ${minimumAbsoluteValue}',
                     // 用于覆盖 defaultPayload
                     replacePayload: {
+                        disabled: 1, // 禁用告警
                         severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
                         name: '【2.0】5-1、借钱-借钱首页-创单后提交支付率-30min内访问量低于830' // 规则标题
                     }
@@ -657,6 +675,7 @@ const config = {
                     threshold: 0.5, // 阈值
                     // 用于覆盖 defaultPayload
                     replacePayload: {
+                        disabled: 1, // 禁用告警
                         severity: 2, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
                         name: '【2.0】5-2、借钱-借钱首页-提交支付成功率-30min内同比下降50%' // 规则标题
                     }
@@ -665,6 +684,7 @@ const config = {
                     threshold: 0.8, // 阈值
                     // 用于覆盖 defaultPayload
                     replacePayload: {
+                        disabled: 1, // 禁用告警
                         severity: 1, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
                         name: '【2.0】5-2、借钱-借钱首页-提交支付成功率-30min内同比下降80%', // 规则标题
                         notify_channels: ['wecom', 'phone'], // 致命告警必须配置电话渠道
