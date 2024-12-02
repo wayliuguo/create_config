@@ -130,12 +130,12 @@ const config = {
                     }
                 },
                 {
+                    // 自定义sql模板
                     sqlTemplate: 'sum(sum_over_time(${metricDenominator}{}[30m])) > ${minimumAbsoluteValue}',
                     // 用于覆盖 defaultPayload
                     replacePayload: {
-                        severity: 1, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
-                        name: '借钱-借钱首页-用户正常停留率-30min内同比下降80%', // 规则标题
-                        runbook_url: 'https://ledocs.oa.fenqile.com/doc/11d4e637e18bb37d0485f7263851542e' // 预案链接，致命告警必填
+                        severity: 3, // 告警级别 普通告警：3，  紧急告警：2， 致命告警：1
+                        name: '借钱-借钱首页-用户正常停留率-30min内访问量低于4200' // 规则标题
                     }
                 }
             ]
