@@ -32,20 +32,8 @@ module.exports = {
             desc: '确认下单按钮点击'
         },
         {
-            eventPosSuffixes: 'CREATE_ORDER_START',
-            desc: '调用创建订单接口'
-        },
-        {
             eventPosSuffixes: 'ORDER_STATE_QUERY_RESULT_SUCCESS',
             desc: '创建订单成功'
-        },
-        {
-            eventPosSuffixes: 'GET_PAGE_INFO_START',
-            desc: '调用查询订单信息接口'
-        },
-        {
-            eventPosSuffixes: 'GET_PAGE_INFO_SUCCESS',
-            desc: '调用查询订单信息接口成功'
         },
         {
             eventPosSuffixes: 'PRE_MATCH',
